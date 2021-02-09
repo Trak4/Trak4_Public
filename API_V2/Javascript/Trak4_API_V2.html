@@ -13,14 +13,20 @@
 
 function loadDoc() {
  const  API_URL = "https://gps.trak-4.com/api/v2/";    //api URL 
- const  API_KEY = "d1b95a4c22f546faa851a8961e0d20f9";  //Your API Key
+ const  API_KEY = "Your_API_Key";  //Your API Key
   var xhttp = new XMLHttpRequest();
   
-let data = {commandstring: "validate_api_key",
+let data = {commandstring: "get_devices",
 token:API_KEY};
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("demo").innerHTML = this.responseText;
+	var json = JSON.parse(this.responseText).data;
+	var innerHTML = "";
+	for(var i = 0; i < json.length; i++) {
+    var obj = json[i];
+    innerHTML += "Device# " +  obj.deviceId + " last reported at "  + obj.lastReportTime + "<br><br>";
+ }
+ document.getElementById("demo").innerHTML = innerHTML;
     }
   };
   xhttp.open("POST",API_URL, true);

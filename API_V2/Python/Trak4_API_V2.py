@@ -2,12 +2,14 @@ import requests
 import json
 
 API_URL = "https://gps.trak-4.com/api/v2/";    
-API_KEY = "d1b95a4c22f546faa851a8961e0d20f9";  
+API_KEY = "Your_API_KEY Here";  
 
-myobj = {'commandstring': 'validate_api_key','token':API_KEY}
+myobj = {'commandstring': 'get_devices','token':API_KEY}
 
 
 
 
 x = requests.post(API_URL, json=myobj)
-print(x.text)
+json_data = x.json()
+for device in json_data.get("data"):
+    print ("Device# " + str(device.get("deviceId")) + " last reported at " + str(device.get("lastReportTime")))
