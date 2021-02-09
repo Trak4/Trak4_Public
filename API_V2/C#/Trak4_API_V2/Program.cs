@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -11,10 +12,10 @@ namespace Trak4API
         static void Main(string[] args)
         {
             const string API_URL = "https://gps.trak-4.com/api/v2/";    //api URL 
-            const string API_KEY = "d1b95a4c22f546faa851a8961e0d20f9";  //Your API Key
-           
+            const string API_KEY = "YOUR_API_KEY";  //Your API Key
 
-            var jsonInString = "{\"commandstring\":\"validate_api_key" +     //JSON in string form
+
+            var jsonInString = "{\"commandstring\":\"get_devices" +     //JSON in string form
                 "\",\"token\":\"" + API_KEY + "\",}";
 
 
@@ -23,12 +24,22 @@ namespace Trak4API
 
             client.DefaultRequestHeaders.Accept.Add(
             new MediaTypeWithQualityHeaderValue("application/json"));
-            var response = client.PostAsync(API_URL, 
+            var response = client.PostAsync(API_URL,
                                       new StringContent(jsonInString, Encoding.UTF8, "application/json")).Result;
             var res = response.Content.ReadAsStringAsync().Result;
-            
-           
-            Console.WriteLine(res.ToString());
+            dynamic json = JsonConvert.DeserializeObject(res);
+
+
+            foreach (var x in json.data)
+            {
+                Console.WriteLine("Device# " + x.deviceId.ToString() + " last reported " + x.lastReportTime);
+
+            }
+
+
+
+
+
         }
     }
 }
