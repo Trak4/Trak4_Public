@@ -1,15 +1,18 @@
-<strong>1.Retrieve your API Key</strong> <br>
-Visit https://gps.trak-4.com/ <br>
-Log in <br>
-Click your username in the top right <br>
-Your API key will appear in the account settings panel. <br>
-<strong>Note:</strong> Contact your account representative to have an API key assigned<br>
-<strong>  Reminder: </strong> The API key is rather lengthy. Make sure to copy the entire key!<br>
- <strong> Reminder:</strong> If your API key is missing, contact support for API access to be activated on your account.<br>
-<strong>Reminder:</strong> Now is a good time to read about API rate limits.<br>
+#1.Retrieve your API Key
+
+- Visit https://gps.trak-4.com/
+- Log in
+- Click your username in the top right
+ - Your API key will appear in the account settings panel.
+
+##Notes
+
+- Reminder - The API key is rather lengthy. Make sure to copy the entire key!
+- Reminder - Now is a good time to read about API rate limits.
 
 
-<strong>2.API Request - Validate API Key</strong><br>
+#2.API Request - Validate API Key
+
 Returns a message indicating the validity of the API key.<br>
 This API request is entirely optional. It is a simple request that can be helpful in building your initial API request code.<br>
 <strong>Sample request</strong><br>
