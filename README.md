@@ -5,10 +5,10 @@
 - Click your username in the top right
  - Your API key will appear in the account settings panel.
 
-## Notes
+## Reminders
 
-- Reminder - The API key is rather lengthy. Make sure to copy the entire key!
-- Reminder - Now is a good time to read about API rate limits.
+- The API key is rather lengthy. Make sure to copy the entire key!
+- Now is a good time to read about API rate limits.
 
 
 # 2. API Request - Validate API Key
