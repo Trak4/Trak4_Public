@@ -24,7 +24,8 @@ Returns a message indicating the validity of the API key.<br>
 # 3. Sample Request
 
 
-## HTTPS Post to https://gps.trak-4.com/api/v2/ with the following JSON Payload:<br>
+## HTTPS Post Request to following address:<br>
+- <strong>  https://gps.trak-4.com/api/v2/ with the following JSON Payload:</strong>
 {<br>
     "commandstring": "validate_api_key",<br>
     "token": "Insert_My_API_Key"<br>
