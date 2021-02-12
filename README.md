@@ -46,14 +46,14 @@ message	String	API key validation details<br>
 
 
 # 4.Please visit following link:
-- https://gps.trak-4.com/api/v2/docs#Section3 for complete list of API commands <br>
+-<strong> https://gps.trak-4.com/api/v2/docs#Section3 for complete list of API commands</strong> <br>
 
 
 # 5.Following are steps to call API commands<br>
 
-- HTTPS Post to https://gps.trak-4.com/api/v2/ with the following JSON Payload:<br>
+-<strong>HTTPS Post to https://gps.trak-4.com/api/v2/ with the following JSON Payload:</strong><br>
 
 <a href="https://ibb.co/Ycw9p3x"><img src="https://i.ibb.co/dPx9GrR/Screenshot-137.png"  alt="Screenshot-137" border="0"></a>
 
-- 5.2 Response Body<br>
+-<strong>Response Body</strong><br>
 <a href="https://ibb.co/YZ7Kzy5"><img src="https://i.ibb.co/pyvstRH/Screenshot-138.png" alt="Screenshot-138" border="0"></a>
