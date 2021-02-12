@@ -10,7 +10,7 @@
 - The API key is rather lengthy. Make sure to copy the entire key!
 - Now is a good time to read about API rate limits.
 
-<br />
+<br /><br />
 # 2. API Request - Validate API Key
 
 - Returns a message indicating the validity of the API key.
@@ -20,8 +20,9 @@
 - This API request is entirely optional.
 - It is a simple request that can be helpful in building your initial API request code.<br>
 
-<br />
-# 3. Sample Request
+<br /><br />
+
+# 3.Sample Request
 
 
 ## 3.1 HTTPS Post Request to following address:
@@ -49,8 +50,9 @@
 - **timestamp:	String	DateTime (UTC) of server response. Format: MM/dd/yyyy HH:mm:ss**
 - **message:	String	API key validation details**  
 
- <br />
+ <br /><br />
 # 4.Full Documentation
+<br />
 - **https://gps.trak-4.com/api/v2/docs#Section3**  
 	- **Following are the commands:**
 		- Get Devices
