@@ -52,8 +52,8 @@
 
  <br /><br />
 # 4.Full Documentation
-<br />
-- **https://gps.trak-4.com/api/v2/docs#Section3**  
+
+- **https://gps.trak-4.com/api/v2/docs#Section3 **  
 	- **Following are the commands:**
 		- Get Devices
 		- Get Device
