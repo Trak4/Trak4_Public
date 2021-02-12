@@ -3,7 +3,7 @@
 - Visit https://gps.trak-4.com/
 - Log in
 - Click your username in the top right
- - Your API key will appear in the account settings panel.
+- Your API key will appear in the account settings panel.
 
 ## Reminders
 
@@ -13,7 +13,7 @@
 
 # 2. API Request - Validate API Key
 
-- Returns a message indicating the validity of the API key.<br>
+- Returns a message indicating the validity of the API key.
 
 ## Note
 
@@ -24,37 +24,45 @@
 # 3. Sample Request
 
 
-## 3.1 HTTPS Post Request to following address:<br>
-- <strong>  https://gps.trak-4.com/api/v2/ with the following JSON Payload:</strong>
-{<br>
-    "commandstring": "validate_api_key",<br>
-    "token": "Insert_My_API_Key"<br>
-}<br>
+## 3.1 HTTPS Post Request to following address:
+- **https://gps.trak-4.com/api/v2/ with the following JSON Payload:**
+
+### {
+### "commandstring": "validate_api_key",
+### "token": "Insert_My_API_Key"
+### }
+
                             
-### 3.1.1 JSON Details<br>
-- commandstring	String	API Request Command<br>
-- token	String	Your API Key<br>
-## 3.2 Sample response<br>
-{<br>
-    "CommandString": "validate_api_key",<br>
-    "timestamp": "12/06/2017 11:14:41",<br>
-    "message": "Valid API key."<br>
-}<br>
-### 3.2.1 JSON Details<br>
-- commandstring	String	Requested API Command<br>
-- timestamp	String	DateTime (UTC) of server response. Format: MM/dd/yyyy HH:mm:ss<br>
-- message	String	API key validation details<br>
+### 3.1.1 JSON Details
+- **commandstring:  String API Request Command**
+- **token	String:	 Your API Key**
+## 3.2 Sample response
+
+### {
+###  "CommandString": "validate_api_key",
+###  "timestamp": "12/06/2017 11:14:41",
+###  "message": "Valid API key."
+### }
+ 
+### 3.2.1 JSON Details 
+- ** commandstring:	String	Requested API Command**
+- ** timestamp:	String	DateTime (UTC) of server response. Format: MM/dd/yyyy HH:mm:ss**
+- ** message:	String	API key validation details**  
+
+ 
+# 4.Full Documentation
+- ** https://gps.trak-4.com/api/v2/docs#Section3 **  
+	- Following are the commands:
+		- Get Devices
+		- Get Device
+		- Get Reports 
+		- Single Device
+		- Retrieve Reports
+		- All Devices
+		- Get Reporting Frequency Options for Device
+		- Get Organizations
+		- Get Device Groups
+		- Get Device Group Devices
+		- Set reporting frequency for device
 
 
-# 4.Link For Complete List Of API Commands
-- <strong> https://gps.trak-4.com/api/v2/docs#Section3 </strong> <br>
-
-
-# 5.How To Call API Commands<br>
-
-## 5.1 HTTPS Post to https://gps.trak-4.com/api/v2/ with the following JSON Payload:<br>
-
-<a href="https://ibb.co/Ycw9p3x"><img src="https://i.ibb.co/dPx9GrR/Screenshot-137.png"  alt="Screenshot-137" border="0"></a>
-
-## 5.2 Response Body:<br>
-<a href="https://ibb.co/YZ7Kzy5"><img src="https://i.ibb.co/pyvstRH/Screenshot-138.png" alt="Screenshot-138" border="0"></a>
