@@ -13,7 +13,7 @@
 
 # 2. API Request - Validate API Key
 
-Returns a message indicating the validity of the API key.<br>
+- Returns a message indicating the validity of the API key.<br>
 
 ## Note
 
@@ -24,26 +24,26 @@ Returns a message indicating the validity of the API key.<br>
 # 3. Sample Request
 
 
-## HTTPS Post Request to following address:<br>
+##3.1 HTTPS Post Request to following address:<br>
 - <strong>  https://gps.trak-4.com/api/v2/ with the following JSON Payload:</strong>
 {<br>
     "commandstring": "validate_api_key",<br>
     "token": "Insert_My_API_Key"<br>
 }<br>
                             
-### JSON Details</strong><br>
-commandstring	String	API Request Command<br>
-token	String	Your API Key<br>
-## Sample response<br>
+###3.1.1 JSON Details</strong><br>
+- commandstring	String	API Request Command<br>
+- token	String	Your API Key<br>
+##3.2 Sample response<br>
 {<br>
     "CommandString": "validate_api_key",<br>
     "timestamp": "12/06/2017 11:14:41",<br>
     "message": "Valid API key."<br>
 }<br>
-### JSON Details<br>
-commandstring	String	Requested API Command<br>
-timestamp	String	DateTime (UTC) of server response. Format: MM/dd/yyyy HH:mm:ss<br>
-message	String	API key validation details<br>
+###3.2.1 JSON Details<br>
+- commandstring	String	Requested API Command<br>
+- timestamp	String	DateTime (UTC) of server response. Format: MM/dd/yyyy HH:mm:ss<br>
+- message	String	API key validation details<br>
 
 
 # 4.Please visit following link:
