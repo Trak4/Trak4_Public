@@ -31,7 +31,7 @@
     "token": "Insert_My_API_Key"<br>
 }<br>
                             
-### 3.1.1 JSON Details</strong><br>
+### 3.1.1 JSON Details<br>
 - commandstring	String	API Request Command<br>
 - token	String	Your API Key<br>
 ## 3.2 Sample response<br>
@@ -46,15 +46,15 @@
 - message	String	API key validation details<br>
 
 
-# 4.Please visit following link for complete list of API commands:
+# 4.Link For Complete List Of API Commands
 - <strong> https://gps.trak-4.com/api/v2/docs#Section3 </strong> <br>
 
 
-# 5.Following are steps to call API commands<br>
+# 5.How To Call API Commands<br>
 
 ## 5.1 HTTPS Post to https://gps.trak-4.com/api/v2/ with the following JSON Payload:<br>
 
 <a href="https://ibb.co/Ycw9p3x"><img src="https://i.ibb.co/dPx9GrR/Screenshot-137.png"  alt="Screenshot-137" border="0"></a>
 
-## 5.2 Response Body<br>
+## 5.2 Response Body:<br>
 <a href="https://ibb.co/YZ7Kzy5"><img src="https://i.ibb.co/pyvstRH/Screenshot-138.png" alt="Screenshot-138" border="0"></a>
