@@ -21,7 +21,7 @@
 - This API request is entirely optional.
 - It is a simple request that can be helpful in building your initial API request code.<br>
 
-<br /><br />
+<br />
 
 # 3.Sample Request
 
@@ -33,38 +33,46 @@
  "token": "Insert_My_API_Key"
 }
 ```
-                        
+
+<br />                  
 			
 **JSON Payload Details**
-- **commandstring:  String API Request Command**
-- **token	String:	 Your API Key**
+- **commandstring**: String API Request Command
+- **token**: Your API Key
 
+<br />
 
 **Sample Response**
 
 ```
  {
   "CommandString": "validate_api_key",
- "timestamp": "12/06/2017 11:14:41",
+  "timestamp": "12/06/2017 11:14:41",
   "message": "Valid API key."
  }
  ```
- 
 
-# 4.Full Documentation
+<br />
 
--  https://gps.trak-4.com/api/v2/docs#Section3   
-	- **Following are the command names:**
-		- Get Devices
-		- Get Device
-		- Get Reports 
-		- Single Device
-		- Retrieve Reports
-		- All Devices
-		- Get Reporting Frequency Options for Device
-		- Get Organizations
-		- Get Device Groups
-		- Get Device Group Devices
-		- Set reporting frequency for device
+# 4. API Commands
+
+- Get Devices
+- Get Device
+- Get Reports 
+- Single Device
+- Retrieve Reports
+- All Devices
+- Get Reporting Frequency Options for Device
+- Get Organizations
+- Get Device Groups
+- Get Device Group Devices
+- Set reporting frequency for device
+
+<br />
+
+# 5. [Full Documentation](https://gps.trak-4.com/api/v2/docs#Section3)
+
+   
+
 
 
