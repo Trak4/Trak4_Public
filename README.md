@@ -10,7 +10,7 @@
 - The API key is rather lengthy. Make sure to copy the entire key!
 - Now is a good time to read about API rate limits.
 
-<br /><br />
+<br />
 # 2. API Request - Validate API Key
 
 - Returns a message indicating the validity of the API key.
