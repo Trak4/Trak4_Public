@@ -15,16 +15,9 @@
 # 2. API Request - Validate API Key
 
 - Returns a message indicating the validity of the API key.
-
-## Note
-
-- This API request is entirely optional.
-- It is a simple request that can be helpful in building your initial API request code.<br>
+- This API request is entirely optional. It is a good "getting started" request. 
 
 <br />
-
-# 3. Sample Request
-
 
 - HTTPS Post to **https://gps.trak-4.com/api/v2/ with the following JSON Payload:**
 ```
@@ -54,7 +47,7 @@
 
 <br />
 
-# 4. API Commands
+# 3. API Commands
 
 - Get Devices
 - Get Device
@@ -70,7 +63,7 @@
 
 <br />
 
-# 5. [Full Documentation](https://gps.trak-4.com/api/v2/docs#Section3)
+# 4. [Full Documentation](https://gps.trak-4.com/api/v2/docs#Section3)
 
    
 
