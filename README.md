@@ -1,4 +1,9 @@
-# 1. Retrieve your API Key
+
+[Full Documentation](https://gps.trak-4.com/api/v2/docs#Section3) is available at https://gps.trak-4.com/api/v2/docs
+
+<br/>
+
+# 1. Getting Started - Retrieve your API Key
 
 - Visit https://gps.trak-4.com/
 - Log in
