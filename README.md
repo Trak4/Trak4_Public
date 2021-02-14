@@ -25,19 +25,22 @@
 # 3.Sample Request
 
 
-## 3.1 HTTPS Post Request to following address:
-- **https://gps.trak-4.com/api/v2/ with the following JSON Payload:**
+- HTTPS Post to **https://gps.trak-4.com/api/v2/ with the following JSON Payload:**
 ```
 {
  "commandstring": "validate_api_key",
  "token": "Insert_My_API_Key"
 }
 ```
-                            
-### 3.1.1 JSON Details
+                        
+			
+**JSON Payload Details**
 - **commandstring:  String API Request Command**
 - **token	String:	 Your API Key**
-## 3.2 Sample response
+
+
+**Sample Response**
+
 ```
  {
   "CommandString": "validate_api_key",
@@ -45,12 +48,8 @@
   "message": "Valid API key."
  }
  ```
-### 3.2.1 JSON Details 
-- **commandstring:	String	Requested API Command**
-- **timestamp:	String	DateTime (UTC) of server response. Format: MM/dd/yyyy HH:mm:ss**
-- **message:	String	API key validation details**  
+ 
 
- <br /><br />
 # 4.Full Documentation
 
 -  https://gps.trak-4.com/api/v2/docs#Section3   
