@@ -23,7 +23,7 @@
 
 <br />
 
-# 3.Sample Request
+# 3. Sample Request
 
 
 - HTTPS Post to **https://gps.trak-4.com/api/v2/ with the following JSON Payload:**
