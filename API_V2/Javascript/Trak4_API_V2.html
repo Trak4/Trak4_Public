@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html>
-<body>
+	<head>
+		<script>
+			function loadDoc() {
+				const  API_URL = "https://gps.trak-4.com/api/v2/";    //api URL 
+				const  API_KEY = "Your_API_Key";  //Your API Key
+				var xhttp = new XMLHttpRequest();
 
-<h1>The Demo To Call Trak4 API</h1>
+				let data = {	commandstring: "get_devices",
+								token:API_KEY
+						   };
+				
+				xhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+						var json = JSON.parse(this.responseText).data;
+						var innerHTML = "";
+						
+						for(var i = 0; i < json.length; i++) {
+							var obj = json[i];
+							innerHTML += "Device# " +  obj.deviceId + " last reported at "  + obj.lastReportTime + "<br><br>";
+						}
+						
+						document.getElementById("demo").innerHTML = innerHTML;
+					}
+				};
+				
+				xhttp.open("POST",API_URL, true);
+				xhttp.setRequestHeader('Content-Type', 'application/json');
+				xhttp.send(JSON.stringify(data));
+			}
+		</script>
+	</head>
+	
+	<body>
 
-<button type="button" onclick="loadDoc()">Request data</button>
+		<h1>The Demo To Call Trak4 API</h1>
 
-<p id="demo"></p>
- 
-<script>
+		<button type="button" onclick="loadDoc()">Request data</button>
 
+		<p id="demo"></p>
 
-function loadDoc() {
- const  API_URL = "https://gps.trak-4.com/api/v2/";    //api URL 
- const  API_KEY = "Your_API_Key";  //Your API Key
-  var xhttp = new XMLHttpRequest();
-  
-let data = {commandstring: "get_devices",
-token:API_KEY};
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-	var json = JSON.parse(this.responseText).data;
-	var innerHTML = "";
-	for(var i = 0; i < json.length; i++) {
-    var obj = json[i];
-    innerHTML += "Device# " +  obj.deviceId + " last reported at "  + obj.lastReportTime + "<br><br>";
- }
- document.getElementById("demo").innerHTML = innerHTML;
-    }
-  };
-  xhttp.open("POST",API_URL, true);
-  xhttp.setRequestHeader('Content-Type', 'application/json');
-  xhttp.send(JSON.stringify(data));
-}
-</script>
-
-</body>
+	</body>
 </html>
