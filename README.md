@@ -11,6 +11,7 @@
 - Now is a good time to read about API rate limits.
 
 <br />
+
 # 2. API Request - Validate API Key
 
 - Returns a message indicating the validity of the API key.
