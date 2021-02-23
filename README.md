@@ -70,7 +70,12 @@
 
 # 4. [Full Documentation](https://gps.trak-4.com/api/v2/docs#Section3)
 
-   
+<br />
+
+# 5. Steps To Run Typescript_React App
+
+- Clone Project To Your Machine
+![Screenshot](screenshot.png)
 
 
 
