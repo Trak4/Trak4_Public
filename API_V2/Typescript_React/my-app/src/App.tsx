@@ -8,21 +8,6 @@ function App() {
   let deviceList: string[] = [];
   const [data, setData] = useState<string[]>([]);
   const [isLoading, setLoading] = useState<boolean>(false);
-<<<<<<< Updated upstream
-  const fetchData = () => {
-    setLoading(true);
-    axios
-      .post<any>("https://gps.trak-4.com/api/v2/", {
-        commandstring: "get_devices",
-        token: "d1b95a4c22f546faa851a8961e0d20f9",
-      })
-      .then((resp) => {
-        resp.data.data.forEach((element: any) => {
-          a.push(element.deviceId);
-        });
-        setData(a);
-        setLoading(false);
-=======
 
   const fetchData = () => {
     setLoading(true);
@@ -37,7 +22,6 @@ function App() {
       })
       .catch((err: any) => {
         console.log(err);
->>>>>>> Stashed changes
       });
   };
 
@@ -66,8 +50,6 @@ function App() {
   );
 }
 
-<<<<<<< Updated upstream
-=======
 const getAllTrak4Devices = (): any => {
   let myHeaders = new Headers();
 
@@ -100,5 +82,4 @@ const getAllTrak4Devices = (): any => {
   });
 };
 
->>>>>>> Stashed changes
 export default App;
