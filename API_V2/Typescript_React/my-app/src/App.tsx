@@ -1,15 +1,14 @@
-import React, { constructor, useState } from "react";
-import logo from "./logo.svg";
-import axios from "axios";
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 import Device from "./Device";
 import loading from "./loading.gif";
 
 function App() {
-  let a: string[] = [];
+  let deviceList: string[] = [];
   const [data, setData] = useState<string[]>([]);
   const [isLoading, setLoading] = useState<boolean>(false);
+<<<<<<< Updated upstream
   const fetchData = () => {
     setLoading(true);
     axios
@@ -23,6 +22,22 @@ function App() {
         });
         setData(a);
         setLoading(false);
+=======
+
+  const fetchData = () => {
+    setLoading(true);
+    getAllTrak4Devices()
+      .then((retVal: any) => {
+        let assetArray = retVal.data;
+        assetArray.forEach((element: any) => {
+          deviceList.push(element.deviceId);
+        });
+        setData(deviceList);
+        setLoading(false);
+      })
+      .catch((err: any) => {
+        console.log(err);
+>>>>>>> Stashed changes
       });
   };
 
@@ -51,4 +66,39 @@ function App() {
   );
 }
 
+<<<<<<< Updated upstream
+=======
+const getAllTrak4Devices = (): any => {
+  let myHeaders = new Headers();
+
+  let data = {
+    commandstring: "get_devices",
+    token: "d1b95a4c22f546faa851a8961e0d20f9",
+  };
+
+  myHeaders.append("Content-Type", "text/plain");
+  myHeaders.append("Accept", "*/*");
+  myHeaders.append("Connection", "keep-alive");
+
+  const myInit = {
+    method: "POST",
+    headers: myHeaders,
+    body: JSON.stringify(data),
+  };
+
+  return new Promise((resolve) => {
+    fetch("https://gps.trak-4.com/api/v2/", myInit)
+      .then((res) => {
+        switch (res.status) {
+          default:
+            res.json().then((data: any) => {
+              resolve(data);
+            });
+        }
+      })
+      .catch((err) => alert(err));
+  });
+};
+
+>>>>>>> Stashed changes
 export default App;

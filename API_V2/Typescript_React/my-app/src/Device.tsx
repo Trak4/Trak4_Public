@@ -1,7 +1,5 @@
 import "bootstrap/dist/css/bootstrap.css";
-import axios from "axios";
 import { useState } from "react";
-import React from "react";
 
 interface DeviceProps {
   name?: string[];
@@ -16,58 +14,65 @@ interface TableData {
 
 export default function Device(props: DeviceProps) {
   const [tableData, setTableData] = useState<TableData[]>([]);
-  const [isLoading, setLoading] = useState<boolean>(false);
-  const columns = React.useMemo(
-    () => [
-      {
-        Header: "Date",
-        accessor: "date",
-      },
-      {
-        Header: "Latitude",
-        accessor: "latitude",
-      },
-      {
-        Header: "Longitude",
-        accessor: "longitude",
-      },
-      {
-        Header: "Voltage",
-        accessor: "voltage",
-      },
-    ],
-    []
-  );
-  let selection = "";
-  const handleChange = (event: any) => {
-    selection = event.target.value;
+  let deviceId = "";
+
+  const get2020RecordsFromAPI = (): any => {
+    let myHeaders = new Headers();
+
+    let data = {
+      commandstring: "get_reports_single_device",
+      token: "d1b95a4c22f546faa851a8961e0d20f9",
+      identifier: deviceId,
+      datetime_start: "01/01/2020 00:00:00",
+      datetime_end: "12/31/2020 00:00:00",
+      coredataonly: true,
+    };
+
+    myHeaders.append("Content-Type", "text/plain");
+    myHeaders.append("Accept", "*/*");
+    myHeaders.append("Connection", "keep-alive");
+
+    const myInit = {
+      method: "POST",
+      headers: myHeaders,
+      body: JSON.stringify(data),
+    };
+
+    return new Promise((resolve) => {
+      fetch("https://gps.trak-4.com/api/v2/", myInit)
+        .then((res) => {
+          switch (res.status) {
+            default:
+              res.json().then((data: any) => {
+                resolve(data);
+              });
+          }
+        })
+        .catch((err) => alert(err));
+    });
   };
 
-  const get2020Reports = () => {
-    if (selection != "") {
-      axios
-        .post<any>("https://gps.trak-4.com/api/v2/", {
-          commandstring: "get_reports_single_device",
-          token: "d1b95a4c22f546faa851a8961e0d20f9",
-          identifier: selection,
-          datetime_start: "01/01/2020 00:00:00",
-          datetime_end: "12/31/2020 00:00:00",
-          coredataonly: true,
-        })
-        .then((resp) => {
-          let a: TableData[] = [];
-          console.log(resp.data);
-          if (!resp.data.isError) {
-            resp.data.data.forEach((element: any) => {
-              a.push({
-                Date: element.receivedDate,
-                Latitude: element.latitude,
-                Longitude: element.longitude,
-                Voltage: element.voltage1,
-              });
+  const handleChange = (event: any) => {
+    deviceId = event.target.value;
+  };
+
+  const get2020sReports = () => {
+    if (deviceId != "") {
+      get2020RecordsFromAPI()
+        .then((retVal: any) => {
+          let tempData: TableData[] = [];
+          retVal.data.forEach((element: any) => {
+            tempData.push({
+              Date: element.receivedDate,
+              Latitude: element.latitude,
+              Longitude: element.longitude,
+              Voltage: element.voltage1,
             });
-          }
-          setTableData(a);
+          });
+          setTableData(tempData);
+        })
+        .catch((err: any) => {
+          console.log(err);
         });
     } else {
       alert("Please Select Device....!");
@@ -100,7 +105,7 @@ export default function Device(props: DeviceProps) {
             </select>
           </div>
           <div className="col-sm-6">
-            <button className="btn btn-primary" onClick={get2020Reports}>
+            <button className="btn btn-primary" onClick={get2020sReports}>
               Load 2020 GPS Reports for
             </button>
           </div>
