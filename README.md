@@ -84,9 +84,16 @@
 
 - Enter following commands to run the project:
 	- npm install
+	
 	![Screenshot](Screenshot2.png)
 	
 	- npm start
+	
+	![Screenshot](screenshot3.png)
+	
+	![Screenshot](screenshot4.png)
+	
+	
 
 
 
