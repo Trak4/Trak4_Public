@@ -75,7 +75,18 @@
 # 5. Steps To Run Typescript_React App
 
 - Clone Project To Your Machine
+
 ![Screenshot](screenshot.png)
+
+- Open Project in Power Shell Window (Press shift + right click)
+
+![Screenshot](screenshot1.png)
+
+- Enter following commands to run the project:
+	- npm install
+	![Screenshot](screenshot2.png)
+	
+	- npm start
 
 
 
