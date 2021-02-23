@@ -91,8 +91,19 @@
 	
 	![Screenshot](screenshot3.png)
 	
+	- App will run on port 3000:
+	
 	![Screenshot](screenshot4.png)
 	
+- Following steps to get the devices and data	
+
+	- Press Load Devices Button
+	
+	![Screenshot](screenshot5.png)
+	
+	- Select Device from drop down and press Load 2020 GPS Reports Button To get Data
+	
+	![Screenshot](screenshot6.png)
 	
 
 
